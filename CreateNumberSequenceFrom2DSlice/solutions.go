@@ -1,11 +1,21 @@
-package createnumbersequencefrom2dslice
+// Merge Sorted Arrays
+// Write a function that takes in a non-empty list of non-empty sorted arrays of
+// integers and returns a merged list of all of those arrays.
+// The integers in the merged list should be in sorted order.
+// input as below
+// [[1, 2, 7],
+//  [2, 5, 8],
+//  [4, 5, 9],]
+// output [1,2,2,4,5,5,7,8,9]
+
+package mergesortedarrays
 
 
 import (
 	"sort"
 )
 
-func findSequenceNumber(input [][]int) []int {
+func solveMergeSortedArrays(input [][]int) []int {
 	input = sort2d(input)
 	output := []int{}
 
@@ -61,12 +71,4 @@ func binarySearch(a [][]int, v int) []int {
 
 func main() {}
 
-//below line of code also gives same output
-// o := []int{}
-// for i := 0; i < len(input); i++ {
-// 	for j := 0; j < len(input[i]); j++ {
-// 		o = append(o, input[i][j])
-// 	}
-// }
-// sort.Ints(o)
-// fmt.Println(o)
+
